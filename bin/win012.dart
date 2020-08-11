@@ -1,4 +1,4 @@
-// http://wisdom.sakura.ne.jp/system/winapi/win32/win11.html
+// http://wisdom.sakura.ne.jp/system/winapi/win32/win12.html
 import 'dart:ffi';
 import 'package:kitty/win32.dart';
 
@@ -6,8 +6,10 @@ final hInstance = GetModuleHandle(nullptr);
 
 int windowProc(int hWnd, int uMsg, int wParam, int lParam) {
   switch (uMsg) {
-    case WM_DESTROY:
-      MessageBox(hWnd, TEXT('終わるにゃん'), TEXT('Kitty'), MB_ICONINFORMATION);
+    case WM_CLOSE:
+      return 0;
+    case WM_RBUTTONUP:
+      DestroyWindow(hWnd);
       PostQuitMessage(0);
       return 0;
   }
