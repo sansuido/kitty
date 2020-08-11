@@ -2,21 +2,19 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
-// winbase.dll
-// int lstrlenA(
-//   LPCSTR lpString
+// kernel32.dll
+// int lstrlenW(
+//   LPCWSTR lpString
 // );
-typedef lstrlenNative = Int32 Function(
-    Pointer<Uint16>lpString);
-typedef lstrlenDart = int Function(
-  Pointer<Uint16>lpString);
+typedef lstrlenNative = Int32 Function(Pointer<Utf16> lpString);
+typedef lstrlenDart = int Function(Pointer<Utf16> lpString);
 
 // shell32.dll
 // UINT DragQueryFileW(
-//   HDROP  hDrop,   // internal structure handle
-//   UINT   iFile,   // file index
-//   PTSTR  pszFile, // buffer for file name
-//   UINT   cch      // buffer size
+//   HDROP  hDrop,
+//   UINT   iFile,
+//   LPWSTR lpszFile,
+//   UINT   cch
 // );
 typedef dragQueryFileNative = Uint32 Function(
     IntPtr hDrop, Uint32 iFile, Pointer<Utf16> pszFile, Uint32 cch);
