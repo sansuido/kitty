@@ -1,4 +1,4 @@
-// http://wisdom.sakura.ne.jp/system/winapi/win32/win16.html
+// http://wisdom.sakura.ne.jp/system/winapi/win32/win17.html
 import 'dart:ffi';
 import 'package:kitty/win32.dart';
 
@@ -12,8 +12,11 @@ int windowProc(int hWnd, int uMsg, int wParam, int lParam) {
     case WM_PAINT:
       final lptStr = TEXT('Kitty on your lap');
       final ps = PAINTSTRUCT.allocate();
+      final tm = TEXTMETRIC.allocate();
       final hdc = BeginPaint(hWnd, ps.addressOf);
+      GetTextMetrics(hdc, tm.addressOf);
       TextOut(hdc, 10, 10, lptStr, lstrlen(lptStr));
+      TextOut(hdc, 10, 10 + tm.tmHeight, lptStr, lstrlen(lptStr));
       EndPaint(hWnd, ps.addressOf);
       return 0;
   }
