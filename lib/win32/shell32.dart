@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'typedefs.dart';
 
 final _shell32 = DynamicLibrary.open('shell32.dll');

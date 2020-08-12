@@ -1,7 +1,5 @@
 import 'dart:ffi';
-
 import 'package:ffi/ffi.dart';
-
 import 'package:win32/win32.dart';
 
 // gdi32.dll
@@ -151,6 +149,14 @@ typedef chordDart = int Function(
 // );
 typedef selectObjectNative = IntPtr Function(IntPtr hdc, IntPtr h);
 typedef selectObjectDart = int Function(int hdc, int h);
+
+// HPEN CreatePen(
+//   int      iStyle,
+//   int      cWidth,
+//   COLORREF color
+// );
+typedef createPenNative = IntPtr Function(Int32 iStyle, Int32 cWidth, Int32 color);
+typedef createPenDart = int Function(int iStyle, int cWidth, int color);
 
 // kernel32.dll
 // int lstrlenW(

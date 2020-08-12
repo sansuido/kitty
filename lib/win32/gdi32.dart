@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'typedefs.dart';
 
 final _gdi32 = DynamicLibrary.open('gdi32.dll');
@@ -36,4 +35,8 @@ final Pie = _gdi32.lookupFunction<pieNative, pieDart>('Pie');
 
 final Chord = _gdi32.lookupFunction<chordNative, chordDart>('Chord');
 
-final SelectObject = _gdi32.lookupFunction<selectObjectNative, selectObjectDart>('SelectObject');
+final SelectObject =
+    _gdi32.lookupFunction<selectObjectNative, selectObjectDart>('SelectObject');
+
+final CreatePen =
+    _gdi32.lookupFunction<createPenNative, createPenDart>('CreatePen');
