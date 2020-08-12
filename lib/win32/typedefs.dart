@@ -39,6 +39,15 @@ typedef polylineToNative = Int32 Function(
     IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
 typedef polylineToDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
 
+// BOOL PolyBezierTo(
+//   HDC         hdc,
+//   const POINT *apt,
+//   DWORD       cpt
+// );
+typedef polyBezierToNative = Int32 Function(
+    IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
+typedef polyBezierToDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
+
 // BOOL PolyPolyline(
 //   HDC         hdc,
 //   const POINT *apt,

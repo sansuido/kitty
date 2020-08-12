@@ -16,6 +16,9 @@ final GetPixel =
 final PolylineTo =
     _gdi32.lookupFunction<polylineToNative, polylineToDart>('PolylineTo');
 
+final PolyBezierTo =
+    _gdi32.lookupFunction<polyBezierToNative, polyBezierToDart>('PolyBezierTo');
+
 final PolyPolyline =
     _gdi32.lookupFunction<polyPolylineNative, polyPolylineDart>('PolyPolyline');
 
