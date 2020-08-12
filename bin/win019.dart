@@ -1,4 +1,4 @@
-// http://wisdom.sakura.ne.jp/system/winapi/win32/win18.html
+// http://wisdom.sakura.ne.jp/system/winapi/win32/win19.html
 import 'dart:ffi';
 import 'package:kitty/win32.dart';
 
@@ -10,13 +10,12 @@ int windowProc(int hWnd, int uMsg, int wParam, int lParam) {
       PostQuitMessage(0);
       return 0;
     case WM_PAINT:
-      final lptStr = TEXT('Kitty on your lap');
+      final lptStr = TEXT('Goverment of the people , by the people , for the people');
+      final rect = RECT.allocate();
       final ps = PAINTSTRUCT.allocate();
       final hdc = BeginPaint(hWnd, ps.addressOf);
-      SetTextColor(hdc, 0xff << 16);
-      TextOut(hdc, 10, 10, lptStr, lstrlen(lptStr));
-      SetTextColor(hdc, RGB(255, 0, 0));
-      TextOut(hdc, 10, 50, lptStr, lstrlen(lptStr));
+      GetClientRect(hWnd, rect.addressOf);
+      DrawText(hdc, lptStr, -1, rect.addressOf, DT_CENTER | DT_WORDBREAK);
       EndPaint(hWnd, ps.addressOf);
       return 0;
   }
@@ -49,11 +48,11 @@ int main(List arguments) {
       NULL,
       hInstance,
       nullptr);
-    if (hWnd == 0) return 0;
-    final msg = MSG.allocate();
-    while (GetMessage(msg.addressOf, NULL, 0, 0) != 0) {
-      TranslateMessage(msg.addressOf);
-      DispatchMessage(msg.addressOf);
-    }
+  if (hWnd == 0) return 0;
+  final msg = MSG.allocate();
+  while (GetMessage(msg.addressOf, NULL, 0, 0) != 0) {
+    TranslateMessage(msg.addressOf);
+    DispatchMessage(msg.addressOf);
+  }
   return msg.wParam;
 }

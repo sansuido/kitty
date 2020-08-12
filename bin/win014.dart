@@ -45,5 +45,5 @@ int main(List arguments) {
     TranslateMessage(msg.addressOf);
     DispatchMessage(msg.addressOf);
   }
-  return 0;
+  return msg.wParam;
 }
