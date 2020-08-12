@@ -2,6 +2,14 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
+// gdi32.dll
+// BOOL RestoreDC(
+//   HDC hdc,
+//   int nSavedDC
+// );
+typedef restoreDCNative = Int32 Function(IntPtr hdc, Int32 nSavedDC);
+typedef restoreDCDart = int Function(int hdc, int nSavedDC);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
