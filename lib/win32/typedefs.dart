@@ -10,6 +10,23 @@ import 'package:ffi/ffi.dart';
 typedef restoreDCNative = Int32 Function(IntPtr hdc, Int32 nSavedDC);
 typedef restoreDCDart = int Function(int hdc, int nSavedDC);
 
+// COLORREF SetPixel(
+//   HDC      hdc,
+//   int      x,
+//   int      y,
+//   COLORREF color
+// );
+typedef setPixelNative = Int32 Function(IntPtr hdc, Int32 x, Int32 y, Int32 color);
+typedef setPixelDart = int Function(int hdc, int x, int y, int color);
+
+// COLORREF GetPixel(
+//   HDC hdc,
+//   int x,
+//   int y
+// );
+typedef getPixelNative = Int32 Function(IntPtr hdc, Int32 x, Int32 y);
+typedef getPixelDart = int Function(int hdc, int x, int y);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
