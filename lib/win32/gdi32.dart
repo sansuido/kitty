@@ -40,3 +40,7 @@ final SelectObject =
 
 final CreatePen =
     _gdi32.lookupFunction<createPenNative, createPenDart>('CreatePen');
+
+final CreatePenIndirect =
+    _gdi32.lookupFunction<createPenIndirectNative, createPenIndirectDart>(
+        'CreatePenIndirect');

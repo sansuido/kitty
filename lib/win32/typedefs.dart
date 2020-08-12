@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 import 'package:win32/win32.dart';
+import 'structs.dart';
 
 // gdi32.dll
 // BOOL RestoreDC(
@@ -157,6 +158,12 @@ typedef selectObjectDart = int Function(int hdc, int h);
 // );
 typedef createPenNative = IntPtr Function(Int32 iStyle, Int32 cWidth, Int32 color);
 typedef createPenDart = int Function(int iStyle, int cWidth, int color);
+
+// HPEN CreatePenIndirect(
+//   const LOGPEN *plpen
+// );
+typedef createPenIndirectNative = IntPtr Function(Pointer<LOGPEN> plpen);
+typedef createPenIndirectDart = int Function(Pointer<LOGPEN> plpen);
 
 // kernel32.dll
 // int lstrlenW(
