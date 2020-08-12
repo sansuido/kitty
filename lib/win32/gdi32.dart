@@ -19,6 +19,9 @@ final PolylineTo =
 final PolyPolyline =
     _gdi32.lookupFunction<polyPolylineNative, polyPolylineDart>('PolyPolyline');
 
-final Rectangle = _gdi32.lookupFunction<rectangleNative, rectangleDart>('Rectangle');
+final Rectangle =
+    _gdi32.lookupFunction<rectangleNative, rectangleDart>('Rectangle');
 
 final Ellipse = _gdi32.lookupFunction<ellipseNative, ellipseDart>('Ellipse');
+
+final RoundRect = _gdi32.lookupFunction<roundRectNative, roundRectDart>('RoundRect');

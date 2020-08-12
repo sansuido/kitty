@@ -74,6 +74,20 @@ typedef ellipseNative = Int32 Function(
 typedef ellipseDart = int Function(
     int hdc, int left, int top, int right, int bottom);
 
+// BOOL RoundRect(
+//   HDC hdc,
+//   int left,
+//   int top,
+//   int right,
+//   int bottom,
+//   int width,
+//   int height
+// );
+typedef roundRectNative = Int32 Function(IntPtr hdc, Int32 left, Int32 top,
+    Int32 right, Int32 bottom, Int32 width, Int32 height);
+typedef roundRectDart = int Function(
+    int hdc, int left, int top, int right, int bottom, int width, int height);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
