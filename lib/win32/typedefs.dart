@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
+import 'package:win32/win32.dart';
+
 // gdi32.dll
 // BOOL RestoreDC(
 //   HDC hdc,
@@ -26,6 +28,14 @@ typedef setPixelDart = int Function(int hdc, int x, int y, int color);
 // );
 typedef getPixelNative = Int32 Function(IntPtr hdc, Int32 x, Int32 y);
 typedef getPixelDart = int Function(int hdc, int x, int y);
+
+// BOOL PolylineTo(
+//   HDC         hdc,
+//   const POINT *apt,
+//   DWORD       cpt
+// );
+typedef polylineToNative = Int32 Function(IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
+typedef polylineToDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
 
 // kernel32.dll
 // int lstrlenW(

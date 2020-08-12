@@ -12,3 +12,6 @@ final SetPixel =
 
 final GetPixel =
     _gdi32.lookupFunction<getPixelNative, getPixelDart>('GetPixel');
+
+final PolylineTo =
+    _gdi32.lookupFunction<polylineToNative, polylineToDart>('PolylineTo');
