@@ -18,7 +18,8 @@ typedef restoreDCDart = int Function(int hdc, int nSavedDC);
 //   int      y,
 //   COLORREF color
 // );
-typedef setPixelNative = Int32 Function(IntPtr hdc, Int32 x, Int32 y, Int32 color);
+typedef setPixelNative = Int32 Function(
+    IntPtr hdc, Int32 x, Int32 y, Int32 color);
 typedef setPixelDart = int Function(int hdc, int x, int y, int color);
 
 // COLORREF GetPixel(
@@ -34,8 +35,20 @@ typedef getPixelDart = int Function(int hdc, int x, int y);
 //   const POINT *apt,
 //   DWORD       cpt
 // );
-typedef polylineToNative = Int32 Function(IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
+typedef polylineToNative = Int32 Function(
+    IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
 typedef polylineToDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
+
+// BOOL PolyPolyline(
+//   HDC         hdc,
+//   const POINT *apt,
+//   const DWORD *asz,
+//   DWORD       csz
+// );
+typedef polyPolylineNative = Int32 Function(
+    IntPtr hdc, Pointer<POINT> apt, Pointer<Int32> asz, Int32 csz);
+typedef polyPolylineDart = int Function(
+    int hdc, Pointer<POINT> apt, Pointer<Int32> asz, int csz);
 
 // kernel32.dll
 // int lstrlenW(
