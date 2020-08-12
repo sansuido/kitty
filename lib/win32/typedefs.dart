@@ -145,6 +145,13 @@ typedef chordNative = Int32 Function(IntPtr hdc, Int32 x1, Int32 y1, Int32 x2,
 typedef chordDart = int Function(
     int hdc, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4);
 
+// HGDIOBJ SelectObject(
+//   HDC     hdc,
+//   HGDIOBJ h
+// );
+typedef selectObjectNative = IntPtr Function(IntPtr hdc, IntPtr h);
+typedef selectObjectDart = int Function(int hdc, int h);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
@@ -168,3 +175,4 @@ typedef dragQueryFileDart = int Function(
 // );
 typedef dragFinishNative = Void Function(IntPtr hDrop);
 typedef dragFinishDart = void Function(int hDrop);
+

@@ -35,3 +35,5 @@ final Arc = _gdi32.lookupFunction<arcNative, arcDart>('Arc');
 final Pie = _gdi32.lookupFunction<pieNative, pieDart>('Pie');
 
 final Chord = _gdi32.lookupFunction<chordNative, chordDart>('Chord');
+
+final SelectObject = _gdi32.lookupFunction<selectObjectNative, selectObjectDart>('SelectObject');
