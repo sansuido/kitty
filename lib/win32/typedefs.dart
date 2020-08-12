@@ -50,6 +50,30 @@ typedef polyPolylineNative = Int32 Function(
 typedef polyPolylineDart = int Function(
     int hdc, Pointer<POINT> apt, Pointer<Int32> asz, int csz);
 
+// BOOL Rectangle(
+//   HDC hdc,
+//   int left,
+//   int top,
+//   int right,
+//   int bottom
+// );
+typedef rectangleNative = Int32 Function(
+    IntPtr hdc, Int32 left, Int32 top, Int32 right, Int32 bottom);
+typedef rectangleDart = int Function(
+    int hdc, int left, int top, int right, int bottom);
+
+// BOOL Ellipse(
+//   HDC hdc,
+//   int left,
+//   int top,
+//   int right,
+//   int bottom
+// );
+typedef ellipseNative = Int32 Function(
+    IntPtr hdc, Int32 left, Int32 top, Int32 right, Int32 bottom);
+typedef ellipseDart = int Function(
+    int hdc, int left, int top, int right, int bottom);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
