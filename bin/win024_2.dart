@@ -12,7 +12,9 @@ int windowProc(int hWnd, int uMsg, int wParam, int lParam) {
     case WM_PAINT:
       final ps = PAINTSTRUCT.allocate();
       final hdc = BeginPaint(hWnd, ps.addressOf);
-      RoundRect(hdc, 10, 10, 200, 200, 50, 50);
+      Arc(hdc, 10, 10, 200, 200, 0, 100, 110, 0);
+      Pie(hdc, 210, 10, 400, 200, 0, 100, 310, 0);
+      Chord(hdc, 410, 10, 600, 200, 0, 100, 510, 0);
       EndPaint(hWnd, ps.addressOf);
       return 0;
   }
@@ -25,6 +27,7 @@ int main(List arguments) {
   wc.lpfnWndProc = Pointer.fromFunction<WindowProc>(windowProc, 0);
   wc.cbClsExtra = 0;
   wc.cbWndExtra = 0;
+  wc.hInstance = hInstance;
   wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
   wc.hCursor = LoadCursor(NULL, IDC_ARROW);
   wc.hbrBackground = GetStockObject(WHITE_BRUSH);

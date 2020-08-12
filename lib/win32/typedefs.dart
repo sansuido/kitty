@@ -88,6 +88,54 @@ typedef roundRectNative = Int32 Function(IntPtr hdc, Int32 left, Int32 top,
 typedef roundRectDart = int Function(
     int hdc, int left, int top, int right, int bottom, int width, int height);
 
+// BOOL Arc(
+//   HDC hdc,
+//   int x1,
+//   int y1,
+//   int x2,
+//   int y2,
+//   int x3,
+//   int y3,
+//   int x4,
+//   int y4
+// );
+typedef arcNative = Int32 Function(IntPtr hdc, Int32 x1, Int32 y1, Int32 x2,
+    Int32 y2, Int32 x3, Int32 y3, Int32 x4, Int32 y4);
+typedef arcDart = int Function(
+    int hdc, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4);
+
+// BOOL Pie(
+//   HDC hdc,
+//   int left,
+//   int top,
+//   int right,
+//   int bottom,
+//   int xr1,
+//   int yr1,
+//   int xr2,
+//   int yr2
+// );
+typedef pieNative = Int32 Function(IntPtr hdc, Int32 left, Int32 top,
+    Int32 right, Int32 bottom, Int32 xr1, Int32 yr1, Int32 xr2, Int32 yr2);
+typedef pieDart = int Function(int hdc, int left, int top, int right,
+    int bottom, int xr1, int yr1, int xr2, int yr2);
+
+// BOOL Chord(
+//   HDC hdc,
+//   int x1,
+//   int y1,
+//   int x2,
+//   int y2,
+//   int x3,
+//   int y3,
+//   int x4,
+//   int y4
+// );
+typedef chordNative = Int32 Function(IntPtr hdc, Int32 x1, Int32 y1, Int32 x2,
+    Int32 y2, Int32 x3, Int32 y3, Int32 x4, Int32 y4);
+typedef chordDart = int Function(
+    int hdc, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString

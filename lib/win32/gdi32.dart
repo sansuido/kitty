@@ -24,4 +24,11 @@ final Rectangle =
 
 final Ellipse = _gdi32.lookupFunction<ellipseNative, ellipseDart>('Ellipse');
 
-final RoundRect = _gdi32.lookupFunction<roundRectNative, roundRectDart>('RoundRect');
+final RoundRect =
+    _gdi32.lookupFunction<roundRectNative, roundRectDart>('RoundRect');
+
+final Arc = _gdi32.lookupFunction<arcNative, arcDart>('Arc');
+
+final Pie = _gdi32.lookupFunction<pieNative, pieDart>('Pie');
+
+final Chord = _gdi32.lookupFunction<chordNative, chordDart>('Chord');
