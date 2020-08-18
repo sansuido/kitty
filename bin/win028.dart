@@ -45,6 +45,7 @@ int main(List arguments) {
       NULL,
       hInstance,
       nullptr);
+  if (hWnd == 0) return 0;
   final msg = MSG.allocate();
   while (GetMessage(msg.addressOf, NULL, 0, 0) != 0) {
     TranslateMessage(msg.addressOf);
