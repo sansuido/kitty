@@ -165,6 +165,35 @@ typedef createPenDart = int Function(int iStyle, int cWidth, int color);
 typedef createPenIndirectNative = IntPtr Function(Pointer<LOGPEN> plpen);
 typedef createPenIndirectDart = int Function(Pointer<LOGPEN> plpen);
 
+// HBRUSH CreateHatchBrush(
+//   int      iHatch,
+//   COLORREF color
+// );
+typedef createHatchBrushNative = IntPtr Function(Int32 iHatch, Int32 color);
+typedef createHatchBrushDart = int Function(int iHatch, int color);
+
+// int SetROP2(
+//   HDC hdc,
+//   int rop2
+// );
+typedef setROP2Native = Int32 Function(IntPtr hdc, Int32 rop2);
+typedef setROP2Dart = int Function(int hdc, int rop2);
+
+// int SetPolyFillMode(
+//   HDC hdc,
+//   int mode
+// );
+typedef setPolyFillModeNative = Int32 Function(IntPtr hdc, Int32 mode);
+typedef setPolyFillModeDart = int Function(int hdc, int mode);
+
+// BOOL Polygon(
+//   HDC         hdc,
+//   const POINT *apt,
+//   int         cpt
+// );
+typedef polygonNative = Int32 Function(IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
+typedef polygonDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
@@ -189,3 +218,9 @@ typedef dragQueryFileDart = int Function(
 typedef dragFinishNative = Void Function(IntPtr hDrop);
 typedef dragFinishDart = void Function(int hDrop);
 
+// user32.dll
+// SHORT GetKeyState(
+//   int nVirtKey
+// );
+typedef getKeyStateNative = Int16 Function(Int32 nVirtKey); 
+typedef getKeyStateDart = int Function(int nVirtKey);

@@ -83,6 +83,33 @@ const WS_EX_PALETTEWINDOW =
     (WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST);
 const WS_EX_LAYERED = 0x00080000;
 
+// Binary raster ops
+const R2_BLACK = 1; //  0
+const R2_NOTMERGEPEN = 2; // DPon
+const R2_MASKNOTPEN = 3; // DPna
+const R2_NOTCOPYPEN = 4; // PN
+const R2_MASKPENNOT = 5; // PDna
+const R2_NOT = 6; // Dn
+const R2_XORPEN = 7; // DPx
+const R2_NOTMASKPEN = 8; // DPan
+const R2_MASKPEN = 9; // DPa
+const R2_NOTXORPEN = 10; // DPxn
+const R2_NOP = 11; // D
+const R2_MERGENOTPEN = 12; // DPno
+const R2_COPYPEN = 13; // P
+const R2_MERGEPENNOT = 14; // PDno
+const R2_MERGEPEN = 15; // DPo
+const R2_WHITE = 16; //  1
+const R2_LAST = 16;
+
+// Hatch Styles
+const HS_HORIZONTAL = 0; // -----
+const HS_VERTICAL = 1; // |||||
+const HS_FDIAGONAL = 2; // \\\\\
+const HS_BDIAGONAL = 3; // /////
+const HS_CROSS = 4; // +++++
+const HS_DIAGCROSS = 5; // xxxxx
+
 // Pen Styles
 const PS_SOLID = 0;
 const PS_DASH = 1; // -------
@@ -107,3 +134,8 @@ const PS_GEOMETRIC = 0x00010000;
 const PS_TYPE_MASK = 0x000F0000;
 const AD_COUNTERCLOCKWISE = 1;
 const AD_CLOCKWISE = 2;
+
+// PolyFill() Modes
+const ALTERNATE = 1;
+const WINDING = 2;
+const POLYFILL_LAST = 2;

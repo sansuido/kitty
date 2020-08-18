@@ -44,3 +44,15 @@ final CreatePen =
 final CreatePenIndirect =
     _gdi32.lookupFunction<createPenIndirectNative, createPenIndirectDart>(
         'CreatePenIndirect');
+
+final CreateHatchBrush =
+    _gdi32.lookupFunction<createHatchBrushNative, createHatchBrushDart>(
+        'CreateHatchBrush');
+
+final SetROP2 = _gdi32.lookupFunction<setROP2Native, setROP2Dart>('SetROP2');
+
+final SetPolyFillMode =
+    _gdi32.lookupFunction<setPolyFillModeNative, setPolyFillModeDart>(
+        'SetPolyFillMode');
+
+final Polygon = _gdi32.lookupFunction<polygonNative, polygonDart>('Polygon');
