@@ -1,3 +1,23 @@
+// Region Flags
+const ERROR = 0;
+const NULLREGION = 1;
+const SIMPLEREGION = 2;
+const COMPLEXREGION = 3;
+
+// CombineRgn() Styles
+const RGN_AND = 1;
+const RGN_OR = 2;
+const RGN_XOR = 3;
+const RGN_DIFF = 4;
+const RGN_COPY = 5;
+const RGN_MIN = RGN_AND;
+const RGN_MAX = RGN_COPY;
+
+// PolyFill() Modes
+const ALTERNATE = 1;
+const WINDING = 2;
+const POLYFILL_LAST = 2;
+
 // Button Control Styles
 const BS_PUSHBUTTON = 0x00000000;
 const BS_DEFPUSHBUTTON = 0x00000001;
@@ -135,7 +155,32 @@ const PS_TYPE_MASK = 0x000F0000;
 const AD_COUNTERCLOCKWISE = 1;
 const AD_CLOCKWISE = 2;
 
-// PolyFill() Modes
-const ALTERNATE = 1;
-const WINDING = 2;
-const POLYFILL_LAST = 2;
+// Device Parameters for GetDeviceCaps()
+const DRIVERVERSION = 0; // Device driver version
+const TECHNOLOGY = 2; // Device classification
+const HORZSIZE = 4; // Horizontal size in millimeters
+const VERTSIZE = 6; // Vertical size in millimeters
+const HORZRES = 8; // Horizontal width in pixels
+const VERTRES = 10; // Vertical height in pixels
+const BITSPIXEL = 12; // Number of bits per pixel
+const PLANES = 14; // Number of planes
+const NUMBRUSHES = 16; // Number of brushes the device has
+const NUMPENS = 18; // Number of pens the device has
+const NUMMARKERS = 20; // Number of markers the device has
+const NUMFONTS = 22; // Number of fonts the device has
+const NUMCOLORS = 24; // Number of colors the device supports
+const PDEVICESIZE = 26; // Size required for device descriptor
+const CURVECAPS = 28; // Curve capabilities
+const LINECAPS = 30; // Line capabilities
+const POLYGONALCAPS = 32; // Polygonal capabilities
+const TEXTCAPS = 34; // Text capabilities
+const CLIPCAPS = 36; // Clipping capabilities
+const RASTERCAPS = 38; // Bitblt capabilities
+const ASPECTX = 40; // Length of the X leg
+const ASPECTY = 42; // Length of the Y leg
+const ASPECTXY = 44; // Length of the hypotenuse
+const LOGPIXELSX = 88; // Logical pixels/inch in X
+const LOGPIXELSY = 90; // Logical pixels/inch in Y
+const SIZEPALETTE = 104; // Number of entries in physical palette
+const NUMRESERVED = 106; // Number of reserved entries in palette
+const COLORRES = 108; // Actual color resolution

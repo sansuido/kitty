@@ -56,3 +56,31 @@ final SetPolyFillMode =
         'SetPolyFillMode');
 
 final Polygon = _gdi32.lookupFunction<polygonNative, polygonDart>('Polygon');
+
+final CreateRectRgn = _gdi32
+    .lookupFunction<createRectRgnNative, createRectRgnDart>('CreateRectRgn');
+
+final FillRgn = _gdi32.lookupFunction<fillRgnNative, fillRgnDart>('FillRgn');
+
+final PaintRgn =
+    _gdi32.lookupFunction<paintRgnNative, paintRgnDart>('PaintRgn');
+
+final FrameRgn =
+    _gdi32.lookupFunction<frameRgnNative, frameRgnDart>('FrameRgn');
+
+final CreateEllipticRgn =
+    _gdi32.lookupFunction<createEllipticRgnNative, createEllipticRgnDart>(
+        'CreateEllipticRgn');
+
+final CreateRoundRectRgn =
+    _gdi32.lookupFunction<createRoundRectRgnNative, createRoundRectRgnDart>(
+        'CreateRoundRectRgn');
+
+final CreatePolygonRgn =
+    _gdi32.lookupFunction<createPolygonRgnNative, createPolygonRgnDart>(
+        'CreatePolygonRgn');
+
+final CombineRgn =
+    _gdi32.lookupFunction<combineRgnNative, combineRgnDart>('CombineRgn');
+
+final GetDeviceCaps = _gdi32.lookupFunction<getDeviceCapsNative, getDeviceCapsDart>('GetDeviceCaps');

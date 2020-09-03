@@ -194,6 +194,84 @@ typedef setPolyFillModeDart = int Function(int hdc, int mode);
 typedef polygonNative = Int32 Function(IntPtr hdc, Pointer<POINT> apt, Int32 cpt);
 typedef polygonDart = int Function(int hdc, Pointer<POINT> apt, int cpt);
 
+// HRGN CreateRectRgn(
+//   int x1,
+//   int y1,
+//   int x2,
+//   int y2
+// );
+typedef createRectRgnNative = Int32 Function(Int32 x1, Int32 y1, Int32 x2, Int32 y2);
+typedef createRectRgnDart = int Function(int x1, int y1, int x2, int y2);
+
+// BOOL FillRgn(
+//   HDC    hdc,
+//   HRGN   hrgn,
+//   HBRUSH hbr
+// );
+typedef fillRgnNative = Int32 Function(IntPtr hdc, IntPtr hrgn, IntPtr hbr);
+typedef fillRgnDart = int Function(int hdc, int hrgn, int hbr);
+
+// BOOL PaintRgn(
+//   HDC  hdc,
+//   HRGN hrgn
+// );
+typedef paintRgnNative = Int32 Function(IntPtr hdc, IntPtr hrgn);
+typedef paintRgnDart = int Function(int hdc, int hrgn);
+
+// BOOL FrameRgn(
+//   HDC    hdc,
+//   HRGN   hrgn,
+//   HBRUSH hbr,
+//   int    w,
+//   int    h
+// );
+typedef frameRgnNative = Int32 Function(IntPtr hdc, IntPtr hrgn, IntPtr hbr, Int32 w, Int32 h);
+typedef frameRgnDart = int Function(int hdc, int hrgn, int hbr, int w, int h);
+
+// HRGN CreateEllipticRgn(
+//   int x1,
+//   int y1,
+//   int x2,
+//   int y2
+// );
+typedef createEllipticRgnNative = IntPtr Function(Int32 x1, Int32 y1, Int32 x2, Int32 y2);
+typedef createEllipticRgnDart = int Function(int x1, int y1, int x2, int y2);
+
+// HRGN CreateRoundRectRgn(
+//   int x1,
+//   int y1,
+//   int x2,
+//   int y2,
+//   int w,
+//   int h
+// );
+typedef createRoundRectRgnNative = IntPtr Function(Int32 x1, Int32 y1, Int32 x2, Int32 y2, Int32 w, Int32 h);
+typedef createRoundRectRgnDart = int Function(int x1, int y1, int x2, int y2, int w, int h);
+
+// HRGN CreatePolygonRgn(
+//   const POINT *pptl,
+//   int         cPoint,
+//   int         iMode
+// );
+typedef createPolygonRgnNative = IntPtr Function(Pointer<POINT> pptl, Int32 cPoint, Int32 iMode);
+typedef createPolygonRgnDart = int Function(Pointer<POINT> pptl, int cPoint, int iMode);
+
+// int CombineRgn(
+//   HRGN hrgnDst,
+//   HRGN hrgnSrc1,
+//   HRGN hrgnSrc2,
+//   int  iMode
+// );
+typedef combineRgnNative = Int32 Function(IntPtr hrgnDst, IntPtr hrgnSrc1, IntPtr hrgnSrc2, Int32 iMode);
+typedef combineRgnDart = int Function(int hrgnDst, int hrgnSrc1, int hrgnSrc2, int iMode);
+
+// int GetDeviceCaps(
+//   HDC hdc,
+//   int index
+// );
+typedef getDeviceCapsNative = Int32 Function(IntPtr hdc, Int32 index);
+typedef getDeviceCapsDart = int Function(int hdc, int index);
+
 // kernel32.dll
 // int lstrlenW(
 //   LPCWSTR lpString
@@ -224,3 +302,19 @@ typedef dragFinishDart = void Function(int hDrop);
 // );
 typedef getKeyStateNative = Int16 Function(Int32 nVirtKey); 
 typedef getKeyStateDart = int Function(int nVirtKey);
+
+// BOOL InvalidateRgn(
+//   HWND hWnd,
+//   HRGN hRgn,
+//   BOOL bErase
+// );
+typedef invalidateRgnNative = Int32 Function(IntPtr hWnd, IntPtr hRgn, Int32 bErase);
+typedef invalidateRgnDart = int Function(int hWnd, int hRgn, int bErase);
+
+// BOOL ValidateRect(
+//   HWND       hWnd,
+//   const RECT *lpRect
+// );
+typedef validateRectNative = Int32 Function(IntPtr hWnd, Pointer<RECT> lpRect);
+typedef validateRectDart = int Function(int hWnd, Pointer<RECT> lpRect);
+
