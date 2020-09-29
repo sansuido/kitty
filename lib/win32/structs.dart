@@ -22,3 +22,4 @@ class LOGPEN extends Struct {
     ..lopnWidthY = 0
     ..lopnColor = 0;
 }
+
