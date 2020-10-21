@@ -318,9 +318,3 @@ typedef invalidateRgnDart = int Function(int hWnd, int hRgn, int bErase);
 typedef validateRectNative = Int32 Function(IntPtr hWnd, Pointer<RECT> lpRect);
 typedef validateRectDart = int Function(int hWnd, Pointer<RECT> lpRect);
 
-// int GetSystemMetrics(
-//   int nIndex
-// );
-typedef getSystemMetricsNative = Int32 Function(Int32 nIndex);
-typedef getSystemMetricsDart = int Function(int nIndex);
-

@@ -279,3 +279,43 @@ const SM_REMOTESESSION = 0x1000;
 const SM_SHUTTINGDOWN = 0x2000;
 const SM_REMOTECONTROL = 0x2001;
 const SM_CARETBLINKINGENABLED = 0x2002;
+
+// Key State Masks for Mouse Messages
+const MK_LBUTTON = 0x0001;
+const MK_RBUTTON = 0x0002;
+const MK_SHIFT = 0x0004;
+const MK_CONTROL = 0x0008;
+const MK_MBUTTON = 0x0010;
+const MK_XBUTTON1 = 0x0020;
+const MK_XBUTTON2 = 0x0040;
+
+// WM_NCHITTEST and MOUSEHOOKSTRUCT Mouse Position Codes
+const HTERROR = (-2);
+const HTTRANSPARENT = (-1);
+const HTNOWHERE = 0;
+const HTCLIENT = 1;
+const HTCAPTION = 2;
+const HTSYSMENU = 3;
+const HTGROWBOX = 4;
+const HTSIZE = HTGROWBOX;
+const HTMENU = 5;
+const HTHSCROLL = 6;
+const HTVSCROLL = 7;
+const HTMINBUTTON = 8;
+const HTMAXBUTTON = 9;
+const HTLEFT = 10;
+const HTRIGHT = 11;
+const HTTOP = 12;
+const HTTOPLEFT = 13;
+const HTTOPRIGHT = 14;
+const HTBOTTOM = 15;
+const HTBOTTOMLEFT = 16;
+const HTBOTTOMRIGHT = 17;
+const HTBORDER = 18;
+const HTREDUCE = HTMINBUTTON;
+const HTZOOM = HTMAXBUTTON;
+const HTSIZEFIRST = HTLEFT;
+const HTSIZELAST = HTBOTTOMRIGHT;
+const HTOBJECT = 19;
+const HTCLOSE = 20;
+const HTHELP = 21;

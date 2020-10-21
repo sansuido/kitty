@@ -12,6 +12,3 @@ final InvalidateRgn = _user32
 final ValidateRect = _user32
     .lookupFunction<validateRectNative, validateRectDart>('ValidateRect');
 
-final GetSystemMetrics =
-    _user32.lookupFunction<getSystemMetricsNative, getSystemMetricsDart>(
-        'GetSystemMetrics');
